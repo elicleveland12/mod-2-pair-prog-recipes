@@ -1,0 +1,7 @@
+<h1><%= @recipe.title %></h1>
+<% @recipe.ingredients.each do |ingredient| %>
+  <h3><%= link_to ingredient.name, ingredient_path %></h3>
+<% end %>
+
+<%= link_to 'Back', recipes_path %>
+<%= link_to 'Delete', @recipe, :method => 'delete' %>
